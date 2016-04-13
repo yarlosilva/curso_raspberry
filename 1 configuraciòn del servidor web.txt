@@ -1,0 +1,38 @@
+
+ACTIVANDO WIFI
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo nano /etc/network/interfaces
+//escribir en el archivo lo siguiente
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-ssid "INFINITUMTUYO"
+wpa-psk "passworddetured"
+
+
+INSTALANDO SERVIDOR WEB
+
+sudo apt-get install apache2 php5 libapache2-mod-php5  
+
+sudo /etc/init.d/apache2 restart 
+
+
+sudo chown www-data:www-data /var/www/  
+
+
+sudo chmod 775 /var/www/ 
+
+sudo usermod -a -G www-data pi 
+
+sudo visudo 
+
+www-data ALL=(root) NOPASSWD:ALL 
+
+sudo /etc/init.d/apache2 restart 
+
+

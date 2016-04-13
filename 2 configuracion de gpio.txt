@@ -1,0 +1,22 @@
+INSTALAMOS EL ARCHIVO HOLAMUNDO EN LA CARPETA PUBLICA
+Y LO EJECUTAMOS CON:
+
+sudo nano /var/www/hola_mundo.php
+
+
+INSTALAMOS GPIO
+
+wget 'http://downloads.sourceforge.net/project/raspberry-gpio-python/RPi.GPIO-0.5.4.tar.gz'
+
+tar zxvf RPi.GPIO-0.5.4.tar.gz
+
+cd RPi.GPIO-0.5.4/
+
+sudo apt-get install python-dev
+
+sudo python setup.py install
+
+INSTALA EL ARCHIVO EN LA RASPBERRY Y LO EJECUTAS
+
+sudo nano blink.py
+
